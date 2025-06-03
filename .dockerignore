@@ -1,5 +1,7 @@
-*
-!target/*-runner
-!target/*-runner.jar
-!target/lib/*
-!target/quarkus-app/*
+# Ignora tudo, exceto o que é necessário para build
+!pom.xml
+!src/
+!.mvn/
+!mvnw
+!mvnw.cmd
+!Dockerfile
