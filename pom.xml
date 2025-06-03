@@ -9,9 +9,9 @@
 
     <properties>
         <compiler-plugin.version>3.14.0</compiler-plugin.version>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
-        <maven.compiler.release>23</maven.compiler.release>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
@@ -115,17 +115,13 @@
                 </executions>
             </plugin>
 
-            <!-- ✅ Corrigido e único maven-compiler-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler-plugin.version}</version>
                 <configuration>
                     <parameters>true</parameters>
-                    <release>23</release>
-                    <compilerArgs>
-                        <arg>--enable-preview</arg>
-                    </compilerArgs>
+                    <release>21</release>
                 </configuration>
             </plugin>
 
@@ -139,7 +135,6 @@
                     <systemPropertyVariables>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                     </systemPropertyVariables>
-                    <argLine>--enable-preview</argLine>
                 </configuration>
             </plugin>
 
@@ -160,7 +155,6 @@
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
-                    <argLine>--enable-preview</argLine>
                 </configuration>
             </plugin>
         </plugins>
