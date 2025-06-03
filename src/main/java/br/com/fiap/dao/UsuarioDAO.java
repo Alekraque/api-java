@@ -19,7 +19,7 @@ public class UsuarioDAO {
     }
 
     public String inserir(Usuario usuario) throws SQLException {
-        String sql = "INSERT INTO usuarios (nome, email, senha, phone) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO Usuarios (nome, email, senha, phone) VALUES (?, ?, ?, ?)";
 
         try (PreparedStatement stmt = minhaConexao.prepareStatement(sql)) {
             stmt.setString(1, usuario.getNome());
@@ -34,7 +34,7 @@ public class UsuarioDAO {
 
     public List<Usuario> selecionar() throws SQLException {
         List<Usuario> listaUsuarios = new ArrayList<>();
-        String sql = "SELECT * FROM usuarios";
+        String sql = "SELECT * FROM Usuarios";
 
         try (PreparedStatement stmt = minhaConexao.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
