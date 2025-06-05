@@ -18,7 +18,7 @@ public class AbrigosResource {
     @GET
     public List<ShelterLocation> getAbrigosProximos(
             @QueryParam("lat") double latitude,
-            @QueryParam("lon") double longitude
+            @QueryParam("lng") double longitude
     ) {
         return abrigoService.gerarAbrigosProximos(latitude, longitude);
     }
