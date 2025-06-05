@@ -26,7 +26,7 @@ public class AbrigoService {
         List<ShelterLocation> locais = new ArrayList<>();
         Random random = new Random();
 
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 1000; i++) {
             double latitude = latitudeRef + (random.nextDouble() - 0.5) * 0.1;
             double longitude = longitudeRef + (random.nextDouble() - 0.5) * 0.1;
 
