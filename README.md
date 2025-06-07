@@ -14,6 +14,17 @@ API desenvolvida em Java com Quarkus para gerenciamento e consulta de abrigos. E
 
 ---
 
+## 🔐 Login
+
+O sistema possui um **login pré-configurado** para testes:
+
+- **Email:** admin@fiap.com
+- **Senha:** 1234
+
+Após realizar o login, o usuário pode buscar abrigos por CEP normalmente.
+
+---
+
 ## 📦 Como rodar o projeto localmente
 
 Certifique-se de ter o Java 21, Maven e acesso a um banco Oracle com as tabelas criadas.
