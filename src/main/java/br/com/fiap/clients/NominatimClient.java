@@ -1,21 +1,17 @@
-package br.com.fiap.clients;
+package br.com.fiap.client;
 
-import br.com.fiap.dto.NominatimResult;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.QueryParam;
-import java.util.List;
-
-@RegisterRestClient(configKey = "nominatim-api")
+@RegisterRestClient(baseUri = "https://nominatim.openstreetmap.org")
+@Path("/search")
 public interface NominatimClient {
-
     @GET
-    @Path("/search")
-    List<NominatimResult> search(
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    String geocode(
             @QueryParam("q") String query,
-            @QueryParam("format") String format,
-            @QueryParam("limit") int limit
+            @QueryParam("format") String format
     );
 }

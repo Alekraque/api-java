@@ -21,7 +21,6 @@ public class UsuariosResource
         try {
             usuarioBO = new UsuarioBO();
         } catch (Exception e) {
-            // Log ou tratamento básico
             System.out.println("Erro ao instanciar UsuarioBO: " + e.getMessage());
         }
     }
