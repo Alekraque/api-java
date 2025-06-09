@@ -21,7 +21,6 @@ public class AbrigoResource {
                 "Rua Augusta, 200 - Consolação, São Paulo - SP, 01304-000",
                 "Rua Oscar Freire, 500 - Jardim Paulista, São Paulo - SP, 01426-001",
                 "Avenida Brigadeiro Faria Lima, 3000 - Itaim Bibi, São Paulo - SP, 04538-132"
-                // ... (vou repetir e variar os endereços para os 100)
         };
 
         for (int i = 1; i <= 100; i++) {
